@@ -1,0 +1,5 @@
+-header with game name
+-click on random person
+    -find random number 
+    -go through people and select nth person
+    append that person to dom

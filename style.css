@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    background-color: black;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 1em auto auto;
+    background-color: cyan;
+    border-radius: 1em;
+    width: auto;
+    height: fit-content;
+}
+
+.picture{
+    float: left;
+    margin: 1em;
+}
+
+img{
+    border-radius: 1em;
+    margin: auto;
+}
