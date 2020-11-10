@@ -5,6 +5,8 @@ let answer;
 $(document).ready(onReady);
 
 function onReady() {
+    // switch up the tiles in a random order
+    shuffle(people);
     // add pictures after page load
     appendPictures();
     // start function that will choose a random person from the list
@@ -16,10 +18,17 @@ function onReady() {
 
 // reset the board and play again
 function reStartGame() {
+    shuffle(people);
     $('main').empty();
     appendPictures()
     startGame()
 }
+
+// this function was taken from https://javascript.info/task/shuffle. array.sort is used to 
+// sort the index, in this case, by a randomly generated number. It's an unreliable method, but it works for the game
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+  }
 
 // pick a random number from 1 to the number of people in the people array
 function startGame() {
