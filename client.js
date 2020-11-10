@@ -11,6 +11,14 @@ function onReady() {
     startGame();
     // click listener to check if player guessed correctly
     $('main').on('click', '.picture', checkGuess)
+    $('main').on('click', '.yes', reStartGame)
+}
+
+// reset the board and play again
+function reStartGame() {
+    $('main').empty();
+    appendPictures()
+    startGame()
 }
 
 // pick a random number from 1 to the number of people in the people array
@@ -47,7 +55,7 @@ function checkGuess() {
     console.log('answer is', answer);
     if (guess === answer.githubUsername) {
         console.log('correxct');
-        $(this).html(`<p>CORRECT!</p>`);
+        $(this).html(`<p>CORRECT!</p><h2>Play Again?</h2>`);
         $(this).addClass(`yes`);
     } else {
         $(this).html(`<p>WRONG!</p>`);
