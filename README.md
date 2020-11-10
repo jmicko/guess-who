@@ -1,3 +1,6 @@
+![REPO SIZE](https://img.shields.io/github/repo-size/jmicko/guess-who?style=flat-square)
+![TOP_LANGUAGE](https://img.shields.io/github/languages/top/jmicko/guess-who?style=flat-square)
+
 # jQuery Guess Who
 
 You will be creating a pick-the-person game with HTML, CSS, and jQuery!

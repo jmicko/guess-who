@@ -32,26 +32,27 @@ function shuffle(array) {
 
 // pick a random number from 1 to the number of people in the people array
 function startGame() {
-    console.log('in startGame');
-    // get the maximum number to pick
-    let totalPeople = people.length;
-    console.log(people.length);
-    let randomNum = randomNumber(0, totalPeople - 1)
-    console.log(randomNum);
-    console.log('the answer is', people[randomNum]);
+    // get the maximum number to pick from
+    let totalPeople = people.length -1;
+    // find a ranndom number that we can find an index value for in the array
+    let randomNum = randomNumber(0, totalPeople)
     answer = people[randomNum];
+    // append the name of the person you are looking for to the dom 
     $('#who').text(`${people[randomNum].name}`)
 }
 
 function appendPictures() {
+    // loop through the array of people
     for (const person of people) {
-        console.log(person);
+        // set a variable for the line of html to show the picture of the person
         let profilePic = $(`
             <div class="picture">
                 <img src="https://github.com/${person.githubUsername}.png?size=250" alt="Profile image of ${person.name}">
             </div>
         `)
+        // add the person data to the div for that person
         profilePic.data('person', person)
+        // ammend it all to the dom
         $('main').append(profilePic);
 
     }
@@ -60,13 +61,12 @@ function appendPictures() {
 function checkGuess() {
     // store the data from the div in a variable
     let guess = $(this).data().person.githubUsername;
-    console.log('guess is', guess);
-    console.log('answer is', answer);
     if (guess === answer.githubUsername) {
-        console.log('correxct');
+        // change the div to a green box that asks if player wants to play again
         $(this).html(`<p>CORRECT!</p><h2>Play Again?</h2>`);
         $(this).addClass(`yes`);
     } else {
+        // change to red box and say wrong
         $(this).html(`<p>WRONG!</p>`);
         $(this).addClass(`no`);
     }
