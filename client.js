@@ -47,6 +47,11 @@ function checkGuess() {
     console.log('answer is', answer);
     if (guess === answer.githubUsername) {
         console.log('correxct');
+        $(this).html(`<p>CORRECT!</p>`);
+        $(this).addClass(`yes`);
+    } else {
+        $(this).html(`<p>WRONG!</p>`);
+        $(this).addClass(`no`);
     }
 }
 

@@ -1,4 +1,5 @@
 body{
+    font-family: 'Patrick Hand', cursive;
     margin: 1em 2em;
     background-color: black;
     text-align: center;
@@ -32,7 +33,6 @@ main{
 img:hover{
     border: black .2em solid;
     margin: 0em;
-    
 }
 
 img:active{
@@ -43,5 +43,30 @@ img:active{
 
 img{
     border-radius: 1em;
-    margin: 0.2em;
+    margin: .2em;
+}
+
+.yes:hover{
+    border: black .2em solid;
+    margin: .8em;
+}
+
+.yes:active{
+    border: black .2em solid;
+    height: 15.2em;
+    width: 15.2em;
+    margin: 1em;
+}
+
+.yes{
+    background-color: rgb(88, 231, 95);
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.no{
+    background-color: rgb(187, 81, 81);
+    border-radius: 1em;
+    margin: 1em;
+    
 }
