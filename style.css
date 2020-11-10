@@ -25,9 +25,29 @@ main{
 
 .picture{
     margin: 1em;
+    padding: 0%;
+    height: 250px;
+    width: 250px;
+    /* border-image-outset: -4px; */
+}
+
+
+img:hover{
+    border: black .2em solid;
+    margin: 0em;
+    /* border-radius: 1.3em; */
+    
+}
+
+img:active{
+    /* border-image-outset: 4px; */
+    border: black .2em solid;
+    border-radius: 1.3em;
+    height: 240px;
+    margin-top: 5px;
 }
 
 img{
     border-radius: 1em;
-    /* margin: auto; */
+    margin: 0.2em;
 }
